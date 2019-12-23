@@ -1,0 +1,23 @@
+name: ArgoCD App Sync
+description: Sync an app on ArgoCD
+inputs:
+  server:
+    description: ArgoCD Server Endpoint
+    required: true
+  auth_token:
+    description: ArgoCD Auth Token
+    required: true
+  app:
+    description: ArgoCD App Name
+    required: true
+outputs:
+  env_url:
+    description: App Environment URL
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    ARGOCD_SERVER: ${{ inputs.server }}
+    ARGOCD_AUTH_TOKEN: ${{ inputs.auth_token }}
+  args:
+    - ${{ inputs.app }}
