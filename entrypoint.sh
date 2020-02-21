@@ -3,7 +3,7 @@
 set -e
 
 echo "==> Fetching argocd cli..."
-curl -sSL -o /usr/local/bin/argocd https://${ARGOCD_SERVER}/download/argocd-linux-amd64
+curl -sSL -o /usr/local/bin/argocd https://${ARGOCD_CLI_SERVER}/download/argocd-linux-amd64
 chmod +x /usr/local/bin/argocd
 
 echo "==> Syncing app..."
