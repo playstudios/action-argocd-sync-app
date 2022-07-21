@@ -1,4 +1,4 @@
-# ArgoCD App Sync Action
+# ArgoCD App Sync Action [ARCHIVED - NEVER USED]
 
 Sync an app on ArgoCD.
 
